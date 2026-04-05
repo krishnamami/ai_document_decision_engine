@@ -1,0 +1,110 @@
+{"timestamp": "2026-03-13T04:46:45.270347Z", "level": "info", "event": "Serving UI homepage."}
+{"timestamp": "2026-03-13T04:46:55.091498Z", "level": "info", "event": "Indexing chat session. Session ID: None, Files: ['NIPS-2017-attention-is-all-you-need-Paper.pdf']"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:46:55.093445Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:46:55.093445Z", "level": "info", "event": "Configuration loaded successfully"}
+{"session_id": "session_20260313_101655_d6dc70f6", "temp_dir": "data\\session_20260313_101655_d6dc70f6", "faiss_dir": "faiss_index\\session_20260313_101655_d6dc70f6", "sessionized": true, "timestamp": "2026-03-13T04:46:55.099025Z", "level": "info", "event": "ChatIngestor initialized"}
+{"uploaded": "NIPS-2017-attention-is-all-you-need-Paper.pdf", "saved_as": "data\\session_20260313_101655_d6dc70f6\\c37b380a.pdf", "timestamp": "2026-03-13T04:46:55.101068Z", "level": "info", "event": "File saved for ingestion"}
+{"count": 11, "timestamp": "2026-03-13T04:46:55.304478Z", "level": "info", "event": "Documents loaded"}
+{"chunks": 43, "chunk_size": 1000, "overlap": 200, "timestamp": "2026-03-13T04:46:55.310409Z", "level": "info", "event": "Documents split"}
+{"timestamp": "2026-03-13T04:46:55.310409Z", "level": "info", "event": "Loading embeddings model"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+Loading faiss with AVX2 support.
+Successfully loaded faiss with AVX2 support.
+Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+{"added": 1, "index": "faiss_index\\session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:46:57.865728Z", "level": "info", "event": "FAISS index updated"}
+{"timestamp": "2026-03-13T04:46:57.865728Z", "level": "info", "event": "Index created successfully for session: session_20260313_101655_d6dc70f6"}
+{"timestamp": "2026-03-13T04:47:03.058104Z", "level": "info", "event": "Received chat query: 'What is this document about?' | session: session_20260313_101655_d6dc70f6"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:47:03.058104Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:47:03.061526Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:47:03.061526Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "groq", "model_name": "llama-3.1-8b-instant", "temperature": 0, "max_tokens": 2048, "timestamp": "2026-03-13T04:47:03.061526Z", "level": "info", "event": "LLM configuration"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:03.664723Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:03.664723Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:47:03.664723Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:47:03.666743Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:47:03.666743Z", "level": "info", "event": "Loading embeddings model"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:04.474763Z", "level": "info", "event": "LCEL graph built successfully"}
+{"index_path": "faiss_index\\session_20260313_101655_d6dc70f6", "index_name": "index", "k": 5, "session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:04.476516Z", "level": "info", "event": "FAISS retriever loaded successfully"}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260313_101655_d6dc70f6", "query_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:47:04.768072Z", "level": "info", "event": "Rewritten query generated"}
+{"attempt": 1, "max_retries": 5, "text_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:47:04.768072Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 1, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:05.011336Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 2, "max_retries": 5, "text_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:47:06.013737Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 2, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:06.162452Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 3, "max_retries": 5, "text_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:47:08.172835Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 3, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:08.312040Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 4, "max_retries": 5, "text_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:47:12.327799Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 4, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:12.479424Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 5, "max_retries": 5, "text_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:47:20.488831Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 5, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:20.722796Z", "level": "warning", "event": "Query embedding failed"}
+{"error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:20.722796Z", "level": "error", "event": "Failed to invoke ConversationalRAG"}
+{"exc_info": true, "timestamp": "2026-03-13T04:47:20.722796Z", "level": "error", "event": "Chat query failed"}
+{"timestamp": "2026-03-13T04:47:45.022991Z", "level": "info", "event": "Received chat query: 'What is attention all you need about?' | session: session_20260313_101655_d6dc70f6"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:47:45.023574Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:47:45.023574Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:47:45.023574Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "groq", "model_name": "llama-3.1-8b-instant", "temperature": 0, "max_tokens": 2048, "timestamp": "2026-03-13T04:47:45.023574Z", "level": "info", "event": "LLM configuration"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:45.563014Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:45.563014Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:47:45.563014Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:47:45.565014Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:47:45.565014Z", "level": "info", "event": "Loading embeddings model"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:46.358900Z", "level": "info", "event": "LCEL graph built successfully"}
+{"index_path": "faiss_index\\session_20260313_101655_d6dc70f6", "index_name": "index", "k": 5, "session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:47:46.358900Z", "level": "info", "event": "FAISS retriever loaded successfully"}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260313_101655_d6dc70f6", "query_preview": "What is attention all you need about?", "timestamp": "2026-03-13T04:47:46.589912Z", "level": "info", "event": "Rewritten query generated"}
+{"attempt": 1, "max_retries": 5, "text_preview": "What is attention all you need about?", "timestamp": "2026-03-13T04:47:46.589912Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 1, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:46.805841Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 2, "max_retries": 5, "text_preview": "What is attention all you need about?", "timestamp": "2026-03-13T04:47:47.807577Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 2, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:47.968840Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 3, "max_retries": 5, "text_preview": "What is attention all you need about?", "timestamp": "2026-03-13T04:47:49.977210Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 3, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:50.127478Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 4, "max_retries": 5, "text_preview": "What is attention all you need about?", "timestamp": "2026-03-13T04:47:54.133836Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 4, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:47:54.286499Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 5, "max_retries": 5, "text_preview": "What is attention all you need about?", "timestamp": "2026-03-13T04:48:02.290326Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 5, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:48:03.204208Z", "level": "warning", "event": "Query embedding failed"}
+{"error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:48:03.204208Z", "level": "error", "event": "Failed to invoke ConversationalRAG"}
+{"exc_info": true, "timestamp": "2026-03-13T04:48:03.204208Z", "level": "error", "event": "Chat query failed"}
+{"timestamp": "2026-03-13T04:49:02.415032Z", "level": "info", "event": "Received chat query: 'What is the meaning of attention in attention all you need paper?' | session: session_20260313_101655_d6dc70f6"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:49:02.415032Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:49:02.415032Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:49:02.415032Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "groq", "model_name": "llama-3.1-8b-instant", "temperature": 0, "max_tokens": 2048, "timestamp": "2026-03-13T04:49:02.415032Z", "level": "info", "event": "LLM configuration"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:49:02.959002Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:49:02.959002Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:49:02.960004Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:49:02.961003Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:49:02.961003Z", "level": "info", "event": "Loading embeddings model"}
+{"session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:49:03.652718Z", "level": "info", "event": "LCEL graph built successfully"}
+{"index_path": "faiss_index\\session_20260313_101655_d6dc70f6", "index_name": "index", "k": 5, "session_id": "session_20260313_101655_d6dc70f6", "timestamp": "2026-03-13T04:49:03.660596Z", "level": "info", "event": "FAISS retriever loaded successfully"}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260313_101655_d6dc70f6", "query_preview": "What is the meaning of \"attention\" in the \"Attention is All You Need\" paper?", "timestamp": "2026-03-13T04:49:03.949757Z", "level": "info", "event": "Rewritten query generated"}
+{"attempt": 1, "max_retries": 5, "text_preview": "What is the meaning of \"attention\" in the \"Attention is All You Need\" paper?", "timestamp": "2026-03-13T04:49:03.949757Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 1, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:49:04.163807Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 2, "max_retries": 5, "text_preview": "What is the meaning of \"attention\" in the \"Attention is All You Need\" paper?", "timestamp": "2026-03-13T04:49:05.166385Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 2, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:49:05.311545Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 3, "max_retries": 5, "text_preview": "What is the meaning of \"attention\" in the \"Attention is All You Need\" paper?", "timestamp": "2026-03-13T04:49:07.325960Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 3, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:49:07.508936Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 4, "max_retries": 5, "text_preview": "What is the meaning of \"attention\" in the \"Attention is All You Need\" paper?", "timestamp": "2026-03-13T04:49:11.511514Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 4, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:49:11.612060Z", "level": "warning", "event": "Query embedding failed"}
+{"attempt": 5, "max_retries": 5, "text_preview": "What is the meaning of \"attention\" in the \"Attention is All You Need\" paper?", "timestamp": "2026-03-13T04:49:19.617985Z", "level": "info", "event": "Embedding query"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 500 Internal Server Error"
+{"attempt": 5, "max_retries": 5, "error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:49:19.825838Z", "level": "warning", "event": "Query embedding failed"}
+{"error": "Error embedding content: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}", "timestamp": "2026-03-13T04:49:19.825838Z", "level": "error", "event": "Failed to invoke ConversationalRAG"}
+{"exc_info": true, "timestamp": "2026-03-13T04:49:19.825838Z", "level": "error", "event": "Chat query failed"}

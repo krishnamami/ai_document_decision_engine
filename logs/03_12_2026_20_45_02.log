@@ -1,0 +1,11 @@
+{"timestamp": "2026-03-13T03:45:11.069560Z", "level": "info", "event": "Serving UI homepage."}
+{"timestamp": "2026-03-13T03:45:20.156763Z", "level": "info", "event": "Received file for analysis: NIPS-2017-attention-is-all-you-need-Paper.pdf"}
+{"session_id": "session_20260313_091520_150cb179", "session_path": "C:\\Users\\bkgou\\OneDrive\\Documents\\document_portal_rag_application\\data\\document_analysis\\session_20260313_091520_150cb179", "timestamp": "2026-03-13T03:45:20.156763Z", "level": "info", "event": "DocHandler initialized"}
+{"file": "NIPS-2017-attention-is-all-you-need-Paper.pdf", "save_path": "C:\\Users\\bkgou\\OneDrive\\Documents\\document_portal_rag_application\\data\\document_analysis\\session_20260313_091520_150cb179\\NIPS-2017-attention-is-all-you-need-Paper.pdf", "session_id": "session_20260313_091520_150cb179", "timestamp": "2026-03-13T03:45:20.156763Z", "level": "info", "event": "PDF saved successfully"}
+{"pdf_path": "C:\\Users\\bkgou\\OneDrive\\Documents\\document_portal_rag_application\\data\\document_analysis\\session_20260313_091520_150cb179\\NIPS-2017-attention-is-all-you-need-Paper.pdf", "session_id": "session_20260313_091520_150cb179", "pages": 11, "timestamp": "2026-03-13T03:45:20.188738Z", "level": "info", "event": "PDF read successfully"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T03:45:20.188738Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T03:45:20.188738Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T03:45:20.188738Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "'google'", "timestamp": "2026-03-13T03:45:20.188738Z", "level": "error", "event": "LLM provider not found in config"}
+{"error": "LLM provider ''google'' not found in config", "timestamp": "2026-03-13T03:45:20.188738Z", "level": "error", "event": "Error initializing DocumentAnalyzer"}
+{"exc_info": true, "timestamp": "2026-03-13T03:45:20.188738Z", "level": "error", "event": "Error during document analysis"}

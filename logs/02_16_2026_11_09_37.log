@@ -1,0 +1,19 @@
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-02-16T19:09:37.683849Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-02-16T19:09:37.683849Z", "level": "info", "event": "Configuration loaded successfully"}
+{"session_id": "session_20260216_190937_3993f7f6", "temp_base": "data\\multi_document_chat", "faiss_base": "faiss_index", "temp_path": "data\\multi_document_chat\\session_20260216_190937_3993f7f6", "faiss_path": "faiss_index\\session_20260216_190937_3993f7f6", "timestamp": "2026-02-16T19:09:37.685877Z", "level": "info", "event": "DocumentIngestor initialized"}
+{"file": "data\\multi_document_chat\\LongReportV1.pdf", "temp_path": "data\\multi_document_chat\\session_20260216_190937_3993f7f6\\e397f9da3d104ac49202f7a5f942f21f.pdf", "session_id": "session_20260216_190937_3993f7f6", "timestamp": "2026-02-16T19:09:37.849218Z", "level": "info", "event": "File ingested successfully"}
+{"num_chunks": 18, "session_id": "session_20260216_190937_3993f7f6", "timestamp": "2026-02-16T19:09:37.851234Z", "level": "info", "event": "Documents split into chunks"}
+{"timestamp": "2026-02-16T19:09:37.851234Z", "level": "info", "event": "Loading embeddings model"}
+Loading faiss with AVX2 support.
+Successfully loaded faiss with AVX2 support.
+Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+{"path": "faiss_index\\session_20260216_190937_3993f7f6", "session_id": "session_20260216_190937_3993f7f6", "timestamp": "2026-02-16T19:09:38.497353Z", "level": "info", "event": "FAISS index created and saved"}
+{"session_id": "session_20260216_190937_3993f7f6", "timestamp": "2026-02-16T19:09:38.498363Z", "level": "info", "event": "Retriever created from FAISS index"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-02-16T19:09:38.500123Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-02-16T19:09:38.501173Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-02-16T19:09:38.501173Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "groq", "model_name": "llama-3.1-8b-instant", "temperature": 0, "max_tokens": 2048, "timestamp": "2026-02-16T19:09:38.502172Z", "level": "info", "event": "LLM configuration"}
+{"session_id": "test_multi_doc_chat", "timestamp": "2026-02-16T19:09:39.045001Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "test_multi_doc_chat", "timestamp": "2026-02-16T19:09:39.045001Z", "level": "info", "event": "LCEL chain built successfully"}
+{"session_id": "test_multi_doc_chat", "timestamp": "2026-02-16T19:09:39.045001Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"error": "Error embedding content: 'ProtoType' object has no attribute 'DESCRIPTOR'", "session_id": "test_multi_doc_chat", "timestamp": "2026-02-16T19:09:39.056346Z", "level": "error", "event": "Error during RAG invocation"}

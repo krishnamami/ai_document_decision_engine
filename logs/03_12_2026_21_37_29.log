@@ -1,0 +1,33 @@
+{"timestamp": "2026-03-13T04:37:33.020638Z", "level": "info", "event": "Serving UI homepage."}
+{"timestamp": "2026-03-13T04:37:40.241548Z", "level": "info", "event": "Indexing chat session. Session ID: None, Files: ['LongReportV1.pdf']"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:37:40.242345Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:37:40.242345Z", "level": "info", "event": "Configuration loaded successfully"}
+{"session_id": "session_20260313_100740_d3578d70", "temp_dir": "data\\session_20260313_100740_d3578d70", "faiss_dir": "faiss_index\\session_20260313_100740_d3578d70", "sessionized": true, "timestamp": "2026-03-13T04:37:40.242345Z", "level": "info", "event": "ChatIngestor initialized"}
+{"uploaded": "LongReportV1.pdf", "saved_as": "data\\session_20260313_100740_d3578d70\\66765244.pdf", "timestamp": "2026-03-13T04:37:40.242345Z", "level": "info", "event": "File saved for ingestion"}
+{"count": 9, "timestamp": "2026-03-13T04:37:40.472496Z", "level": "info", "event": "Documents loaded"}
+{"chunks": 17, "chunk_size": 1000, "overlap": 200, "timestamp": "2026-03-13T04:37:40.472496Z", "level": "info", "event": "Documents split"}
+{"timestamp": "2026-03-13T04:37:40.472496Z", "level": "info", "event": "Loading embeddings model"}
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+Loading faiss with AVX2 support.
+Successfully loaded faiss with AVX2 support.
+Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+{"added": 1, "index": "faiss_index\\session_20260313_100740_d3578d70", "timestamp": "2026-03-13T04:37:42.456929Z", "level": "info", "event": "FAISS index updated"}
+{"timestamp": "2026-03-13T04:37:42.459632Z", "level": "info", "event": "Index created successfully for session: session_20260313_100740_d3578d70"}
+{"timestamp": "2026-03-13T04:37:47.466615Z", "level": "info", "event": "Received chat query: 'What is this document about?' | session: session_20260313_100740_d3578d70"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:37:47.466615Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:37:47.466615Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:37:47.466615Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "groq", "model_name": "llama-3.1-8b-instant", "temperature": 0, "max_tokens": 2048, "timestamp": "2026-03-13T04:37:47.466615Z", "level": "info", "event": "LLM configuration"}
+{"session_id": "session_20260313_100740_d3578d70", "timestamp": "2026-03-13T04:37:48.199581Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260313_100740_d3578d70", "timestamp": "2026-03-13T04:37:48.199581Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-03-13T04:37:48.199581Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-13T04:37:48.199581Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-03-13T04:37:48.199581Z", "level": "info", "event": "Loading embeddings model"}
+`embedding_function` is expected to be an Embeddings object, support for passing in a function will soon be removed.
+{"session_id": "session_20260313_100740_d3578d70", "timestamp": "2026-03-13T04:37:49.148939Z", "level": "info", "event": "LCEL graph built successfully"}
+{"index_path": "faiss_index\\session_20260313_100740_d3578d70", "index_name": "index", "k": 5, "session_id": "session_20260313_100740_d3578d70", "timestamp": "2026-03-13T04:37:49.148939Z", "level": "info", "event": "FAISS retriever loaded successfully"}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260313_100740_d3578d70", "query_preview": "What is the purpose of this document?", "timestamp": "2026-03-13T04:37:49.422076Z", "level": "info", "event": "Rewritten query generated"}
+{"error": "'RetryEmbeddings' object is not callable", "timestamp": "2026-03-13T04:37:49.422076Z", "level": "error", "event": "Failed to invoke ConversationalRAG"}
+{"exc_info": true, "timestamp": "2026-03-13T04:37:49.425841Z", "level": "error", "event": "Chat query failed"}

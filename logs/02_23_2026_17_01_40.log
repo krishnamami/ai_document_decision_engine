@@ -1,0 +1,15 @@
+{"timestamp": "2026-02-24T01:01:52.693293Z", "level": "info", "event": "Serving UI homepage."}
+{"timestamp": "2026-02-24T01:02:20.628770Z", "level": "info", "event": "Serving UI homepage."}
+{"timestamp": "2026-02-24T01:02:38.523010Z", "level": "info", "event": "Received file for analysis: NIPS-2017-attention-is-all-you-need-Paper.pdf"}
+{"session_id": "session_20260224_063238_1db32966", "session_path": "C:\\Users\\bkgou\\OneDrive\\Documents\\document_portal_rag_application\\data\\document_analysis\\session_20260224_063238_1db32966", "timestamp": "2026-02-24T01:02:38.535750Z", "level": "info", "event": "DocHandler initialized"}
+{"file": "NIPS-2017-attention-is-all-you-need-Paper.pdf", "save_path": "C:\\Users\\bkgou\\OneDrive\\Documents\\document_portal_rag_application\\data\\document_analysis\\session_20260224_063238_1db32966\\NIPS-2017-attention-is-all-you-need-Paper.pdf", "session_id": "session_20260224_063238_1db32966", "timestamp": "2026-02-24T01:02:38.538757Z", "level": "info", "event": "PDF saved successfully"}
+{"pdf_path": "C:\\Users\\bkgou\\OneDrive\\Documents\\document_portal_rag_application\\data\\document_analysis\\session_20260224_063238_1db32966\\NIPS-2017-attention-is-all-you-need-Paper.pdf", "session_id": "session_20260224_063238_1db32966", "pages": 11, "timestamp": "2026-02-24T01:02:38.587559Z", "level": "info", "event": "PDF read successfully"}
+{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-02-24T01:02:38.591841Z", "level": "info", "event": "All required environment variables are set."}
+{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-02-24T01:02:38.597194Z", "level": "info", "event": "Configuration loaded successfully"}
+{"timestamp": "2026-02-24T01:02:38.598191Z", "level": "info", "event": "Loading LLM ..."}
+{"provider": "groq", "model_name": "llama-3.1-8b-instant", "temperature": 0, "max_tokens": 2048, "timestamp": "2026-02-24T01:02:38.598191Z", "level": "info", "event": "LLM configuration"}
+{"timestamp": "2026-02-24T01:02:39.304134Z", "level": "info", "event": "DocumentAnalyzer initialized successfully"}
+{"timestamp": "2026-02-24T01:02:39.304134Z", "level": "info", "event": "Meta-data analysis chain initialized"}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+{"error": "Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01jw9qn8rhenvvts9r688tq3jt` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8856, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", "timestamp": "2026-02-24T01:02:39.623755Z", "level": "error", "event": "Metadata analysis failed"}
+{"exc_info": true, "timestamp": "2026-02-24T01:02:39.655333Z", "level": "error", "event": "Error during document analysis"}

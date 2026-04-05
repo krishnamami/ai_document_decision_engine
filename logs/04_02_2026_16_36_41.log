@@ -1,0 +1,6 @@
+python-dotenv could not parse statement starting at line 6
+python-dotenv could not parse statement starting at line 7
+python-dotenv could not parse statement starting at line 8
+{"timestamp": "2026-04-02T23:36:41.816785Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"error": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)", "timestamp": "2026-04-02T23:36:41.816785Z", "level": "warning", "event": "Failed to parse API_KEYS as JSON"}
+{"missing_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2026-04-02T23:36:41.816785Z", "level": "error", "event": "Missing required API keys"}
