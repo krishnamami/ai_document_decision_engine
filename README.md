@@ -5,5 +5,6 @@
 4.Vector Database (In Memory Db, On Disk DB,Cloud Based DB) for deployment Cloud based
 5.GROQ_API_KEY Link https://console.groq.com/keys
 6.Gemini API KEY for Embeddings https://ai.google.dev/gemini-api/docs/embeddings
+7.
 
 
