@@ -1,4 +1,0 @@
-{"available_keys": ["GOOGLE_API_KEY", "GROQ_API_KEY"], "timestamp": "2026-02-16T18:37:59.795335Z", "level": "info", "event": "All required environment variables are set."}
-{"config_keys": ["faiss_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-02-16T18:37:59.796825Z", "level": "info", "event": "Configuration loaded successfully"}
-{"session_id": "session_20260216_183759_722c13ce", "temp_base": "data\\multi_document_chat", "faiss_base": "faiss_index", "temp_path": "data\\multi_document_chat\\session_20260216_183759_722c13ce", "faiss_path": "faiss_index\\session_20260216_183759_722c13ce", "timestamp": "2026-02-16T18:37:59.797834Z", "level": "info", "event": "DocumentIngestor initialized"}
-{"error": "[Errno 2] No such file or directory: 'data\\\\multi_document_chat\\\\session_20260216_183759_722c13ce\\\\36e7cbfcfc58444ebed89a274ebee2fb.pdf'", "timestamp": "2026-02-16T18:37:59.798315Z", "level": "error", "event": "Error ingesting files"}
