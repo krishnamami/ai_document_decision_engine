@@ -21,7 +21,7 @@ SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".txt"}
 
 # FAISS Manager (load-or-create)
 class FaissManager:
-    def __init__(self, index_dir: Path, model_loader: Optional[Model_Loader] = None):
+    def __init__(self, index_dir: Path, model_loader: Optional[ModelLoader] = None):
         self.index_dir = Path(index_dir)
         self.index_dir.mkdir(parents=True, exist_ok=True)
         
