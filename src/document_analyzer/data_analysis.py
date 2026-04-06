@@ -1,6 +1,6 @@
 import os
 import sys
-from utils.model_loader import Model_Loader
+from utils.model_loader import ModelLoader
 from logger.custom_logger import CustomLogger
 from logger import GLOBAL_LOGGER as log
 from exception.custom_exception import DocumentPortalException
@@ -19,7 +19,7 @@ class DocumentAnalyzer:
     def __init__(self):
         self.log=CustomLogger().get_logger(__name__)
         try:
-            self.loader=Model_Loader()
+            self.loader=ModelLoader()
             self.llm=self.loader.load_llm()
             self.parser=JsonOutputParser(pydantic_object=Metadata)
             self.fixing_parser=OutputFixingParser.from_llm(self.llm,self.parser)
