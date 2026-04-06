@@ -11,7 +11,7 @@ import fitz  # PyMuPDF
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from utils.model_loader import Model_Loader
+from utils.model_loader import ModelLoader
 from logger import GLOBAL_LOGGER as log
 from exception.custom_exception import DocumentPortalException
 from utils.file_io import generate_session_id, save_uploaded_files
@@ -35,7 +35,7 @@ class FaissManager:
                 self._meta = {"rows": {}} # init the empty one if dones not exists
         
 
-        self.model_loader = model_loader or Model_Loader()
+        self.model_loader = model_loader or ModelLoader()
         self.emb = self.model_loader.load_embeddings()
         self.vs: Optional[FAISS] = None
         
@@ -101,7 +101,7 @@ class ChatIngestor:
         session_id: Optional[str] = None,
     ):
         try:
-            self.model_loader = Model_Loader()
+            self.model_loader = ModelLoader()
             
             self.use_session = use_session_dirs
             self.session_id = session_id or generate_session_id()

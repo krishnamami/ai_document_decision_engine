@@ -10,7 +10,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.embeddings import Embeddings
 from langchain_community.vectorstores import FAISS
 
-from utils.model_loader import Model_Loader
+from utils.model_loader import ModelLoader
 from exception.custom_exception import DocumentPortalException
 from logger import GLOBAL_LOGGER as log
 from prompt.prompt_library import PROMPT_REGISTRY
@@ -148,7 +148,7 @@ class ConversationalRAG:
             if not os.path.isdir(index_path):
                 raise FileNotFoundError(f"FAISS index directory not found: {index_path}")
 
-            base_embeddings = Model_Loader().load_embeddings()
+            base_embeddings = ModelLoader().load_embeddings()
             embeddings = RetryEmbeddings(base_embeddings)
 
             vectorstore = FAISS.load_local(
@@ -223,7 +223,7 @@ class ConversationalRAG:
 
     def _load_llm(self):
         try:
-            llm = Model_Loader().load_llm()
+            llm = ModelLoader().load_llm()
             if not llm:
                 raise ValueError("LLM could not be loaded")
             log.info("LLM loaded successfully", session_id=self.session_id)
