@@ -1,7 +1,8 @@
+
 {
   "family": "documentportaltd",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::621646470377:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+  "executionRoleArn": "arn:aws:iam::621646470377:role/ecsTaskExecutionRole",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
   "memory": "8192",
